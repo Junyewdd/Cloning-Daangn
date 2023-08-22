@@ -5,16 +5,16 @@ const ItemCard = ({item}) => {
   
   return (
     <Wrapper>
-      <ItemImage src="/img/main_bear.png" alt="Item Image"/>
+      <ItemImage src={item.image} alt="Item Image"/>
       <Contents>
-        <Title>{"안녕"}</Title>
-        <Where>{"하이"}</Where>
-        <Money>{"1000원"}</Money>
+        <Title>{item.title}</Title>
+        <Where>{item.location}</Where>
+        <Money>{item.price}원</Money>
         <Information>
           <Image src="/img/talk.png" alt="talk"></Image>
-          <div>{"2"}</div>
+          <div>{item.chatting}</div>
           <Image src="/img/emptyHeart.png" alt="heart"></Image>
-          <div>{"2"}</div>
+          <div>{item.wish}</div>
         </Information>
       </Contents>
     </Wrapper>

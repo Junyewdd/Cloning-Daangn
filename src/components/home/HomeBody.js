@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import { styled } from 'styled-components'
 import ItemDataSection from './item/ItemDataSection'
+import { homePageApi } from '../../apis/home';
 
 const HomeBody = () => {
   const [datas, setDatas] = useState([]);
   const getitemDatas = async ()=> {
-    // const response = await homePageApi();
-    // console.log("하이");
-    const response = "하이";
-    console.log(response);
-    setDatas(response);
+    const response = await homePageApi();
+    console.log("하이");
+    // const response = "하이";
+    console.log(response.data.result);
+    setDatas(response.data.result);
     return response;
   }
   useEffect(()=>{

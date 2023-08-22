@@ -20,11 +20,11 @@ const ItemDataSection = ({itemDatas}) => {
   // }, [])
   return (
     <>
-    {/* {itemDatas && 
+    {itemDatas && 
     itemDatas.map((item)=>(
       <ItemCard item={item}/>
     ))
-    } */}
+    }
     </>
   )
 }
