@@ -19,7 +19,7 @@ export default HomeHeader
 const Wrapper = styled.div`
 width: 100%;
 height: 7%;
-background-color: pink;
+border-bottom: 1px solid rgba(145, 147, 146, 1);
 
 display: flex;
 justify-content: space-between;

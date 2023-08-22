@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import HomeHeader from '../components/home/HomeHeader'
 import Nav from '../components/home/Nav'
 import HomeBody from '../components/home/HomeBody'
 import { styled } from 'styled-components'
 
 const Home = () => {
+  const [isModal, setIsModal] = useState(false);
   return (
     <Container>
     <Wrapper>
