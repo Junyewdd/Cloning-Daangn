@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { styled } from 'styled-components'
 import ItemDataSection from './item/ItemDataSection'
 import { homePageApi } from '../../apis/home';
+import { detailPageApi } from '../../apis/detail';
 
 const HomeBody = () => {
   const [datas, setDatas] = useState([]);
@@ -11,6 +12,8 @@ const HomeBody = () => {
     // const response = "하이";
     console.log(response.data.result);
     setDatas(response.data.result);
+    const detail = await detailPageApi();
+    console.log(detail);
     return response;
   }
   useEffect(()=>{

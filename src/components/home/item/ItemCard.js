@@ -39,7 +39,6 @@ const Contents = styled.div`
 width: 235px;
 height: 90%;
 margin: 1%;
-border: 1px solid black;
 
 display: flex;
 flex-direction: column;
