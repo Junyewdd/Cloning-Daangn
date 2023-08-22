@@ -1,5 +1,4 @@
 import React from 'react'
-import PageLayout from '../components/PageLayout'
 import HomeHeader from '../components/home/HomeHeader'
 import Nav from '../components/home/Nav'
 import HomeBody from '../components/home/HomeBody'
@@ -9,9 +8,9 @@ const Home = () => {
   return (
     <Container>
     <Wrapper>
-      <HomeHeader></HomeHeader>
-      <HomeBody></HomeBody>
-      <Nav></Nav>
+      <HomeHeader/>
+      <HomeBody/>
+      <Nav/>
     </Wrapper>
     </Container>
 

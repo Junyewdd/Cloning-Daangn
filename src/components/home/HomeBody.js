@@ -1,22 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { styled } from 'styled-components'
-import ItemCard from './ItemCard'
+import ItemDataSection from './item/ItemDataSection'
 
 const HomeBody = () => {
+  const [datas, setDatas] = useState([]);
+  const getitemDatas = async ()=> {
+    // const response = await homePageApi();
+    // console.log("하이");
+    const response = "하이";
+    console.log(response);
+    setDatas(response);
+    return response;
+  }
+  useEffect(()=>{
+    const fetchData = () => {
+      getitemDatas();
+    };
+    fetchData();
+  }, []);
   return (
     <Wrapper>
-      <ItemCard/>
-      <ItemCard/>
-      <ItemCard/>
-      <ItemCard/>
-      <ItemCard/>
-      <ItemCard/>
-      <ItemCard/>
-      <ItemCard/>
-      <ItemCard/>
-      <ItemCard/>
-      <ItemCard/>
-      <ItemCard/>
+      <ItemDataSection itemDatas={datas}/>
     </Wrapper>
   )
 }
@@ -25,7 +29,6 @@ export default HomeBody
 const Wrapper = styled.div`
 width: 100%;
 height: 86%;
-background-color: yellow;
 
 display: flex;
 justify-content: flex-start;
