@@ -1,15 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { styled } from 'styled-components'
 import NavMenu from './homeComponents/NavMenu'
 
 const Nav = () => {
+  const [click, setClick] = useState("home");
   return (
     <Wrapper>
-        <NavMenu/>
-        <NavMenu/>
-        <NavMenu/>
-        <NavMenu/>
-        <NavMenu/>        
+        <NavMenu which={"home"} click={click} setClick={setClick}/>
+        <NavMenu which={"village"} click={click} setClick={setClick}/>
+        <NavMenu which={"gps"} click={click} setClick={setClick}/>
+        <NavMenu which={"chat"} click={click} setClick={setClick}/>
+        <NavMenu which={"me"} click={click} setClick={setClick}/>        
     </Wrapper>
   )
 }
