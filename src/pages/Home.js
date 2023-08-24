@@ -2,12 +2,13 @@ import React, { useState } from 'react'
 import Nav from '../components/home/Nav'
 import HomeBody from '../components/home/HomeBody'
 import { styled } from 'styled-components'
-
+import HomeHeader from "../components/home/HomeHeader"
 const Home = () => {
   const [isModal, setIsModal] = useState(false);
   return (
     <Container>
     <Wrapper>
+      <HomeHeader/>
       <HomeBody/>
       <Nav/>
     </Wrapper>
