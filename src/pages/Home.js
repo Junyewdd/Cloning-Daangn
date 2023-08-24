@@ -4,6 +4,7 @@ import HomeBody from '../components/home/HomeBody'
 import { styled } from 'styled-components'
 import HomeHeader from "../components/home/HomeHeader"
 const Home = () => {
+  const [where, setWhere] = useState("All");
   const [isModal, setIsModal] = useState(false);
   const writeModalOn = () => {
     setIsModal(!isModal);
@@ -11,8 +12,8 @@ const Home = () => {
   return (
     <Container>
     <Wrapper>
-      <HomeHeader/>
-      <HomeBody/>
+      <HomeHeader where={where} setWhere={setWhere}/>
+      <HomeBody where={where}/>
       <Writing onClick={writeModalOn}>글쓰기</Writing>
       <Nav/>
     </Wrapper>

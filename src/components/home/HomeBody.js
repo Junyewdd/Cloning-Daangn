@@ -4,7 +4,7 @@ import ItemDataSection from './item/ItemDataSection'
 import { homePageApi } from '../../apis/home';
 import { detailPageApi } from '../../apis/detail';
 
-const HomeBody = () => {
+const HomeBody = ({where}) => {
   const [datas, setDatas] = useState([]);
   const getitemDatas = async ()=> {
     const response = await homePageApi();
@@ -22,21 +22,21 @@ const HomeBody = () => {
   }, []);
   return (
     <Wrapper>
-      <ItemDataSection itemDatas={datas}/>
+      <ItemDataSection itemDatas={datas} where={where}/>
     </Wrapper>
   )
 }
 
 export default HomeBody
 const Wrapper = styled.div`
-width: 100%;
+width: 99%;
 height: 86%;
 
 display: flex;
 justify-content: flex-start;
 align-items: center;
-flex-direction: row;
+flex-direction: column;
 
 flex-wrap: wrap;
-overflow: scroll;
+overflow-x: scroll;
 `

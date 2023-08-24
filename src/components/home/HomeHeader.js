@@ -3,10 +3,10 @@ import { styled } from 'styled-components'
 import Where from './homeComponents/Where'
 import Menu from './homeComponents/Menu'
 
-const HomeHeader = () => {
+const HomeHeader = ({where, setWhere}) => {
   return (
     <Wrapper>
-        <Where>Home</Where>
+        <Where where={where} setWhere={setWhere}>Home</Where>
         <Menu>Menu</Menu>
 
 
