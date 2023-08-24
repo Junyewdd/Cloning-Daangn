@@ -1,12 +1,13 @@
 import React from 'react'
 import { styled } from 'styled-components';
 import UserInfo from './detailComponents/UserInfo';
+import Contents from './detailComponents/Contents';
 
 const DetailContents = ({data}) => {
   return (
     <Wrapper>
         <UserInfo data={data}/>
-
+        <Contents data={data}/>
     </Wrapper>
   )
 }
@@ -19,5 +20,5 @@ height: 48%;
 // background-color: green;
 
 display: flex;
-flex-direction: row;
+flex-direction: column;
 `
