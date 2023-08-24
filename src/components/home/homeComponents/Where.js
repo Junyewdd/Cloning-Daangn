@@ -70,4 +70,5 @@ display: flex;
 justify-content: center;
 align-items: center;
 padding-right: 25px;
+cursor: pointer;
 `
