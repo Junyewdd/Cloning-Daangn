@@ -29,6 +29,7 @@ height: 100px;
 border-bottom: 1px solid black;
 padding: 1% 1% 0 1%;
 display: flex;
+cursor: pointer;
 `
 const ItemImage = styled.img`
 width: 95px;

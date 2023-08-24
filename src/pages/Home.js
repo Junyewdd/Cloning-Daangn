@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import HomeHeader from '../components/home/HomeHeader'
 import Nav from '../components/home/Nav'
 import HomeBody from '../components/home/HomeBody'
 import { styled } from 'styled-components'
@@ -9,7 +8,6 @@ const Home = () => {
   return (
     <Container>
     <Wrapper>
-      <HomeHeader/>
       <HomeBody/>
       <Nav/>
     </Wrapper>
