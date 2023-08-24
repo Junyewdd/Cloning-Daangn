@@ -1,10 +1,14 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import { styled } from 'styled-components'
 
 const ItemCard = ({item}) => {
-  
+  const navigate = useNavigate();
+  const goto = (num) => {
+    navigate("/detail");
+  }
   return (
-    <Wrapper>
+    <Wrapper onClick={()=>goto(1)}>
       <ItemImage src={item.image} alt="Item Image"/>
       <Contents>
         <Title>{item.title}</Title>
@@ -26,7 +30,8 @@ export default ItemCard
 const Wrapper = styled.div`
 width: 100%;
 height: 100px;
-border-bottom: 1px solid black;
+// border-bottom: 1px solid black;
+box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
 padding: 1% 1% 0 1%;
 display: flex;
 cursor: pointer;

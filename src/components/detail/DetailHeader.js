@@ -4,13 +4,18 @@ import detailHome from "../../img/detailHome.png"
 import arrowLeft from "../../img/arrowLeft.png"
 import share from "../../img/share.png"
 import dots from "../../img/dots.png"
+import { useNavigate } from 'react-router-dom';
 
 
 
 
 const DetailHeader = () => {
+  const navigate = useNavigate();
+  const back = () => {
+    navigate("/");
+  }
   return (
-    <Wrapper>
+    <Wrapper onClick={back}>
       <Left>
         <Image src={arrowLeft} alt="back"></Image>
         <Image src={detailHome} alt="home"></Image>
