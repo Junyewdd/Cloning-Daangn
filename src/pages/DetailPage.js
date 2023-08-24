@@ -23,7 +23,7 @@ const DetailPage = () => {
     <Container>
     <Wrapper>
       <DetailImage images={detailData}/>
-      <DetailContents/>
+      <DetailContents data={detailData}/>
       <DetailFooter/>
 
     </Wrapper>
