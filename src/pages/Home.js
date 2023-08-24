@@ -5,12 +5,15 @@ import { styled } from 'styled-components'
 import HomeHeader from "../components/home/HomeHeader"
 const Home = () => {
   const [isModal, setIsModal] = useState(false);
+  const writeModalOn = () => {
+    setIsModal(!isModal);
+  }
   return (
     <Container>
     <Wrapper>
       <HomeHeader/>
       <HomeBody/>
-      <Writing>글쓰기</Writing>
+      <Writing onClick={writeModalOn}>글쓰기</Writing>
       <Nav/>
     </Wrapper>
     </Container>
