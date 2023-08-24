@@ -8,8 +8,6 @@ const HomeBody = () => {
   const [datas, setDatas] = useState([]);
   const getitemDatas = async ()=> {
     const response = await homePageApi();
-    console.log("하이");
-    // const response = "하이";
     console.log(response.data.result);
     setDatas(response.data.result);
     const detail = await detailPageApi();
